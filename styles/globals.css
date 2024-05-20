@@ -1,0 +1,82 @@
+/* globals.css */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+  height: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(120deg, #080808 30%, #151515 60%, #080808 90%);
+  background-size: 200% 100%;
+  animation: moveBG 10s linear infinite;
+}
+
+@keyframes moveBG {
+  0% { background-position: 100% 0; }
+  100% { background-position: 0 0; }
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+/* Typewriter effect styles */
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Centers the content */
+  letter-spacing: .15em; /* Adjusts the spacing between letters */
+  animation: 
+    typing 3.5s steps(40, end) 1s infinite alternate,
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px; /* Smaller gap */
+}
+
+.gallery img {
+  transition: transform .2s; /* Smooth transform */
+}
+
+.gallery img:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
